@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    password: basic-shop
+    url: jdbc:postgresql://localhost:5732/basic-shop
+    username: basic-shop
+    hikari:
+      maximum-pool-size: 20
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+server:
+  tomcat:
+    threads:
+      max: 200

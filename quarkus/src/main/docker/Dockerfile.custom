@@ -1,0 +1,5 @@
+FROM adoptopenjdk:11.0.9_11-jre-openj9-0.23.0
+COPY target/lib/* /deployments/lib/
+COPY target/*-runner.jar /deployments/app.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","/deployments/app.jar"]
